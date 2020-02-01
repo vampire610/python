@@ -5,11 +5,27 @@ ad = {}
 
 def create():
     print('enter msg')
-    name = input('name')
-    tel = input('tel')
-    email = input('email')
+    name = input('name:')
+    tel = input('tel:')
+    email = input('email:')
     ad[name] = [tel, email]
+    # print(ad[name])
+
+
+def search():
+    print('ple enter name')
+    name = input('name:')
     print(ad[name])
+    print('Do you want fix or del this mag?(f/d/n,修改，删除，不操作)')
+    modify = input()
+    if modify == 'f':
+        print()
+    elif modify == 'd':
+        pass
+    elif modify == 'n':
+        pass
+    else:
+        print('enter error')
 
 
 print('This is an address book')
@@ -21,7 +37,7 @@ while restart:
     if choose == '1':
         create()
     elif choose == '2':
-        pass
+        search()
     elif choose == '3':
         break
     else:
